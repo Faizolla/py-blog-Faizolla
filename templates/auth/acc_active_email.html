@@ -1,0 +1,7 @@
+{% autoescape off %}
+Здравствуйте, {{user.first_name}} {{user.last_name}}
+Спасибо за регистрацию на сайте {{domain}}
+Перейдите по ссылке для активации аккаунта:
+<a href="https://{{ domain }}{% url 'activate' uidb64=uid token=token %}"></a>
+Если вы не регистрировались на нашем сайте, то просто игнорируйте сообщение
+{% endautoescape %}

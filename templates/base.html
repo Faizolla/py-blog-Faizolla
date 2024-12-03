@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <a href="{% url 'all_post' %}"><img src="{% static 'assets/logo.png' %}" alt="Logotype"></a>
+        <h1>AnimeHub</h1>
+        <div class="btns">
+            {% if user.is_authenticated %}
+            <p> {{user.first_name}} {{user.last_name}} </p>
+            <a href="{% url 'logout' %}"><button class="login-btn">Logout</button></a>
+            {% else %}
+            <a href="{% url 'login' %}"><button class="login-btn">Login</button></a>
+            <a href="{% url 'registration' %}"><button class="regis-btn" >Registration</button></a>
+            {% endif %}
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

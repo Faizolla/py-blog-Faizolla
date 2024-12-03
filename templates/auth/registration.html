@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <h1>Регистрация</h1>
+<form action="" class="login-card" method="post">
+    {% csrf_token %} 
+    
+    {{ form.first_name }}
+    {% if form.first_name.help_text %} 
+    <small style="display: none ">{{ form.first_name.help_text }}</small> 
+    {% for error in form.first_name.errors %} 
+    <p style="color: red">{{ error }}</p> 
+    {% endfor %}
+    {% endif %}
+
+    {{ form.last_name }}
+    {% if form.last_name.help_text %} 
+    <small style="display: none ">{{ form.last_name.help_text }}</small> 
+    {% for error in form.last_name.errors %} 
+    <p style="color: red">{{ error }}</p> 
+    {% endfor %}
+    {% endif %}
+
+    {{ form.email }}
+    {% if form.email.help_text %} 
+    <small style="display: none ">{{ form.email.help_text }}</small> 
+    {% for error in form.email.errors %} 
+    <p style="color: red">{{ error }}</p> 
+    {% endfor %}
+    {% endif %}
+
+    {{ form.phone }}
+    {% if form.phone.help_text %} 
+    <small style="display: none ">{{ form.phone.help_text }}</small> 
+    {% for error in form.phone.errors %} 
+    <p style="color: red">{{ error }}</p> 
+    {% endfor %}
+    {% endif %}
+    
+    <span class="password">
+        {{ form.password1 }}
+        <a href="#" class="password-control" id="pi" onclick="return show_hide_password(this);"></a>
+    </span> 
+    {% if form.password1.help_text %} 
+    <small style="display: none ">{{ form.password1.help_text }}</small> 
+    {% for error in form.password1.errors %} 
+    <p style="color: red">{{ error }}</p> 
+    {% endfor %}
+    {% endif %}
+    <span class="password">
+        {{ form.password2 }}
+        <a href="#" class="password-control" id="pi1" onclick="return show_hide_password(this);"></a>
+    </span> 
+    {% if form.password2.help_text %} 
+    <small style="display: none ">{{ form.password2.help_text }}</small> 
+    {% for error in form.password2.errors %} 
+    <p style="color: red">{{ error }}</p> 
+    {% endfor %}
+    {% endif %}
+    <span class="form-inputs">
+        <button class="btn" type="submit">Зарегестрироваться</button>
+        <a href="{% url 'login'%}">Войти</a>
+    </span>
+</form>
+</div>
+{% endblock  %}

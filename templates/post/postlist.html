@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    {% if user.is_authenticated %}
+    <a href="{% url 'add_post' %}"><button>New Post</button></a>
+    {% endif %}
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{post.title}}</h2>
+            <a href="{% url 'post_details' pid=post.pk %}"> Details </a>
+            {% if user.is_authenticated and user == post.author %}
+            <a href="{% url 'edit_post' pid=post.pk %}"> Edit </a>
+            <a href="{% url 'post_delete' pid=post.pk %}"> Delete </a>
+            {% endif %}
+            <div class="images">
+                {% for att in post.att %}
+                    <img src="/media/{{ att.file }}" style="width: 350px">
+                {% endfor %}
+            </div>
+            <p class="content">{{post.content}}</p>
+            <p><i>Created by {{post.author}}</i></p>
+            <p><u>{{post.date}}</u></p>
+        </div>
+    {% endfor %}
+{% endblock %}
+

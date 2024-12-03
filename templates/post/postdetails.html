@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class= "post_info">
+    <h1>{{post.title}}</h1>
+    <p>Author: {{post.author}} Date: {{post.date}} {% if post.edited %} (Edited) {% endif %}</p>
+    <div class= "post-img">
+        {% for image in images %}
+        <img src="/media/{{image.file}}" style="width: 500px;">
+        {% endfor %}
+    </div>
+    <p>{{post.content}}</p>
+    <hr>
+    <h1>Comments</h1>
+    <a href="{% url 'comment_new' pid=post.id %}"><button>New Comment</button></a>
+    <div>
+        {% for comment in comments %}
+            <h2>{{comment.author}}</h2>
+            <p>{{comment.content}}</p>
+        {% endfor %}
+    </div>
+</div>    
+{% endblock %}

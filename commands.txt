@@ -1,0 +1,16 @@
+python -m venv myvenv
+myvenv\Scripts\activate
+>pip install -r req.txt
+django-admin startproject blog .
+python manage.py migrate
+python manage.py runserver
+python manage.py startapp posts
+python manage.py createsuperuser
+python manage.py makemigrations
+python manage.py migrate
+pip install django-modeltranslation - установка модуля перевода
+python manage.py update_translation_fields - обновление существующих полей при добавлении нового языка перевода
+#Добавление в .ро файл всех текстов в теге trans
+django-admin makemessages -l kk -e html
+#компиляция переводов из .ро файла в .mo файл для отображения на сайте
+django-admin compilemessages
