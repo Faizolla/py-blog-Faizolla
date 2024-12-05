@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
 
 <div class="NewPost">
-    <h1>New Comment</h1>
+    <h1>{% trans 'Добавление комментария' %}</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label for="content">Content:</label>
+        <label for="content">{% trans 'Контент' %}:</label>
         {{ form.content }}
-        <button type="submit">Add Comment</button>
+        <button type="submit">{% trans 'Добавить комментарий' %}</button>
     </form>
 </div>
 

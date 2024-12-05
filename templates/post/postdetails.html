@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
 <div class= "post_info">
     <h1>{{post.title}}</h1>
-    <p>Author: {{post.author}} Date: {{post.date}} {% if post.edited %} (Edited) {% endif %}</p>
+    <p>{% trans 'Автор' %}: {{post.author}} {% trans 'Дата' %}: {{post.date}} {% if post.edited %} ({% trans 'Редактирован' %}) {% endif %}</p>
     <div class= "post-img">
         {% for image in images %}
         <img src="/media/{{image.file}}" style="width: 500px;">
@@ -11,8 +11,8 @@
     </div>
     <p>{{post.content}}</p>
     <hr>
-    <h1>Comments</h1>
-    <a href="{% url 'comment_new' pid=post.id %}"><button>New Comment</button></a>
+    <h1>{% trans 'Комментарий' %}</h1>
+    <a href="{% url 'comment_new' pid=post.id %}"><button>{% trans 'Новый комментарий' %}</button></a>
     <div>
         {% for comment in comments %}
             <h2>{{comment.author}}</h2>

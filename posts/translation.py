@@ -1,8 +1,9 @@
-from modeltranslation.translator import translator, TranslationOptions
+from modeltranslation.translator import register, TranslationOptions
 from .models import Post
 
+@register(Post)
 class PostTranslationOptions(TranslationOptions):
     fields = ('title', 'content')
 
-translator.register(Post, PostTranslationOptions)
+
 

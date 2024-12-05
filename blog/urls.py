@@ -19,14 +19,19 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from users.views import registration, activation, user_login, user_logout
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n', include('django.conf.urls.i18n')),
+]
+
+urlpatterns += i18n_patterns (
     path('', include('posts.urls')),
     path('registration/', registration, name='registration'),
     path('login/', user_login, name='login'),
     path('logout/', user_logout, name='logout'),
     path('activation/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activation, name='activate'),
-]
+)
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

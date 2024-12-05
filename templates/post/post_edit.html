@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static i18n %}
 {% block content %}
 
 <div class="NewPost">
-    <h1>Edit Post</h1>
+    <h1>{% trans 'Редактирование поста' %}</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label for="title">Title:</label>
+        <label for="title">{% trans 'Заголовок' %}:</label>
         {{ form.title }}
-        <label for="content">Content:</label>
+        <label for="content">{% trans 'Контент' %}:</label>
         {{ form.content }}
-        <label for="images">Images:</label>
-        <label for="file-upload-input" class="btn-upload">Upload Images</label>
+        <label for="images">{% trans 'Картинки' %}:</label>
+        <label for="file-upload-input" class="btn-upload">{% trans 'Загрузить картинки' %}</label>
         <div style="display:none">
         {{ form.images }}
         </div>
@@ -23,7 +23,7 @@
             <img src="/media/{{img.file}}" style="width: 500px">
         </div>
         {% endfor %}
-        <button type="submit">Save Post</button>
+        <button type="submit">{% trans 'Сохранить пост' %}</button>
     </form>
 </div>
 <script src="{% static 'scrypt.js' %}"></script>

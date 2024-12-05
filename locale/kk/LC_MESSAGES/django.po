@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-05 12:23+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:217
+msgid "Django Documentation"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:235
+msgid "Django Community"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\myvenv\Lib\site-packages\django\views\templates\directory_index.html:8
+#: .\myvenv\Lib\site-packages\django\views\templates\directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\templates\auth\fail_activate.html:4
+msgid "Время ссылки для активации истекло. Пройдите регистрацию повторно."
+msgstr ""
+
+#: .\templates\auth\login.html:6
+msgid "Авторизация"
+msgstr ""
+
+#: .\templates\auth\login.html:30 .\templates\auth\registration.html:64
+msgid "Войти"
+msgstr ""
+
+#: .\templates\auth\login.html:31 .\templates\auth\registration.html:6
+#: .\templates\base.html:20
+msgid "Регистрация"
+msgstr ""
+
+#: .\templates\auth\register_email_messege.html:5
+msgid "Поздравляем с регистрацией!!! На указанную почту"
+msgstr ""
+
+#: .\templates\auth\register_email_messege.html:5
+msgid "было отправлено письмо."
+msgstr ""
+
+#: .\templates\auth\registration.html:63
+msgid "Зарегестрироваться"
+msgstr ""
+
+#: .\templates\auth\success_activate.html:4
+msgid "Поздравляем с активацией аккаунта. Теперь вы можете авторизоваться."
+msgstr ""
+
+#: .\templates\base.html:17
+msgid "Выйти"
+msgstr ""
+
+#: .\templates\base.html:19
+msgid "Вход"
+msgstr ""
+
+#: .\templates\post\comment_new.html:6
+msgid "Добавление комментария"
+msgstr ""
+
+#: .\templates\post\comment_new.html:9 .\templates\post\newpost.html:11
+#: .\templates\post\post_edit.html:11
+msgid "Контент"
+msgstr ""
+
+#: .\templates\post\comment_new.html:11
+msgid "Добавить комментарий"
+msgstr ""
+
+#: .\templates\post\newpost.html:6
+msgid "Создание поста"
+msgstr ""
+
+#: .\templates\post\newpost.html:9 .\templates\post\post_edit.html:9
+msgid "Заголовок"
+msgstr ""
+
+#: .\templates\post\newpost.html:13 .\templates\post\post_edit.html:13
+msgid "Картинки"
+msgstr ""
+
+#: .\templates\post\newpost.html:14 .\templates\post\post_edit.html:14
+msgid "Загрузить картинки"
+msgstr ""
+
+#: .\templates\post\newpost.html:20
+msgid "Добавить пост"
+msgstr ""
+
+#: .\templates\post\post_edit.html:6
+msgid "Редактирование поста"
+msgstr ""
+
+#: .\templates\post\post_edit.html:26
+msgid "Сохранить пост"
+msgstr ""
+
+#: .\templates\post\postdetails.html:6
+msgid "Автор"
+msgstr ""
+
+#: .\templates\post\postdetails.html:6
+msgid "Дата"
+msgstr ""
+
+#: .\templates\post\postdetails.html:6
+msgid "Редактирован"
+msgstr ""
+
+#: .\templates\post\postdetails.html:14
+msgid "Комментарий"
+msgstr ""
+
+#: .\templates\post\postdetails.html:15
+msgid "Новый комментарий"
+msgstr ""
+
+#: .\templates\post\postlist.html:5
+msgid "Новый пост"
+msgstr ""
+
+#: .\templates\post\postlist.html:10
+msgid "Подробнее"
+msgstr ""
+
+#: .\templates\post\postlist.html:12
+msgid "Редактировать"
+msgstr ""
+
+#: .\templates\post\postlist.html:13
+msgid "Удалить"
+msgstr ""
+
+#: .\templates\post\postlist.html:21
+msgid "Опубликован"
+msgstr ""
