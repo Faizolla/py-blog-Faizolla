@@ -8,7 +8,7 @@
         <div class="post">
             <h2>{{post.title}}</h2>
             <a href="{% url 'post_details' pid=post.pk %}"> {% trans 'Подробнее' %} </a>
-            {% if (user.is_authenticated and user == post.author) or (user.is_authenticated and user.is_superuser) %}
+            {% if user.is_authenticated and user == post.author or user.is_staff %}
             <a href="{% url 'edit_post' pid=post.pk %}"> {% trans 'Редактировать' %} </a>
             <a href="{% url 'post_delete' pid=post.pk %}"> {% trans 'Удалить' %} </a>
             {% endif %}
